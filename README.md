@@ -9,8 +9,12 @@ Our project coded with basic knowledge of OpenCV, Flask, HTML, CSS and Sqlite3. 
 Login Screen
 ![Login Screen](https://github.com/DuongDuc15/Face-filter/blob/master/preview/login.png)
 
-Streaming screen
+Streaming Screen
 ![Streaming Screen](https://github.com/DuongDuc15/Face-filter/blob/master/preview/streaming.png)
+
+Album Screen
+![Album Screen](https://github.com/DuongDuc15/Face-filter/blob/master/preview/album1.png)
+![Album Screen](https://github.com/DuongDuc15/Face-filter/blob/master/preview/album2.png)
 
 <br>
 
