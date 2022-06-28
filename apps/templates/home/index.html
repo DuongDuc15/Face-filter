@@ -1,0 +1,105 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+
+<!-- chartist CSS -->
+<link href="{{ config.ASSETS_ROOT }}/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+<link href="{{ config.ASSETS_ROOT }}/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
+<link href="{{ config.ASSETS_ROOT }}/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css"
+    rel="stylesheet">
+<!--This page css - Morris CSS -->
+<link href="{{ config.ASSETS_ROOT }}/plugins/c3-master/c3.min.css" rel="stylesheet">
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="page-breadcrumb">
+    <div class="row align-items-center">
+        <div class="col-md-6 col-8 align-self-center">
+            <h3 class="page-title mb-0 p-0">Dashboard</h3>
+            <div class="d-flex align-items-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- <div class="col-md-6 col-4 align-self-center">
+            <div class="text-end upgrade-btn">
+                <a href="https://appseed.us/support/" class="btn btn-danger d-none d-md-inline-block text-white"
+                    target="_blank">
+                    Support
+                </a>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Container fluid  -->
+<!-- ============================================================== -->
+<div class="container-fluid">
+
+
+    <h1>Streaming Video</h1>
+    <!-- <1<div id="recorder">
+        <div class="col-sm-12">
+            <button class="btn btn-success text-white" id="record">Record</button>
+        </div>
+        <div class="col-sm-12">
+            <button class="btn btn-success text-white" id="stop">Stop</button>
+        </div> -->
+    <!-- <button id="stop">Stop</button> -->
+    <!-- <a id="download"></a> -->
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='recorder.js') }}"></script> -->
+    <!-- </div> -->
+    <img id="video" src="{{ url_for('home_blueprint.video_feed') }}" width="70%" height="70%">
+    <br><br>
+    <form method="post" action="{{ url_for('home_blueprint.tasks') }}">
+        <div class="col-sm-12">
+            <button class="btn btn-success text-white" type="submit" name="stop" value="Stop/Start">Stop/Start
+                Video</button><br>
+            <button class="btn btn-success text-white" type="submit" name="face" value="Change">Change
+                filter</button><br>
+            <button class="btn btn-success text-white" type="submit" name="click" value="Capture">Capture</button>
+            <button class="btn btn-success text-white" type="submit" name="rec" value="Start/Stop Recording">Start/Stop
+                Recording</button>
+        </div>
+    </form>
+
+
+
+</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+
+{% endblock content %}
+
+{% block javascripts %}
+
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
+<!-- chartist chart -->
+<script src="{{ config.ASSETS_ROOT }}/plugins/chartist-js/dist/chartist.min.js"></script>
+<script
+    src="{{ config.ASSETS_ROOT }}/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+<!--c3 JavaScript -->
+<script src="{{ config.ASSETS_ROOT }}/plugins/d3/d3.min.js"></script>
+<script src="{{ config.ASSETS_ROOT }}/plugins/c3-master/c3.min.js"></script>
+<!--Custom JavaScript -->
+<script src="{{ config.ASSETS_ROOT }}/js/pages/dashboards/dashboard1.js"></script>
+
+{% endblock javascripts %}
