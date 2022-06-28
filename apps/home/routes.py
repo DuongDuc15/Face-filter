@@ -19,14 +19,14 @@ from os import listdir
 from os.path import isfile, join
 from itertools import cycle
 
-global capture, rec_frame, listmask, len_list, switch, face, rec, out
+global capture, rec_frame, listmask, len_list, mask, switch, face, rec, out
 capture = 0
 face = 0
 switch = 1
 rec = 0
 listmask = [f for f in listdir("./mask") if isfile(join("./mask", f))]
 index_list = 0
-
+mask = ""
 
 # model load
 modelFile = r"models\dnn\res10_300x300_ssd_iter_140000.caffemodel"
@@ -105,7 +105,7 @@ def detect_face(frame, mask):
 
 
 def gen_frames():  # generate frame by frame from camera
-    global out, capture, rec_frame
+    global out, capture, rec_frame, mask
     while True:
         success, frame = camera.read()
         if success:

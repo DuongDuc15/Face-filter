@@ -51,33 +51,27 @@
 <!-- ============================================================== -->
 <div class="container-fluid">
 
-
     <h1>Streaming Video</h1>
-    <!-- <1<div id="recorder">
-        <div class="col-sm-12">
-            <button class="btn btn-success text-white" id="record">Record</button>
+    <div class="row">
+        <div class="col-8">
+            <img id="video" src="{{ url_for('home_blueprint.video_feed') }}" width="100%" height="100%">
         </div>
-        <div class="col-sm-12">
-            <button class="btn btn-success text-white" id="stop">Stop</button>
-        </div> -->
-    <!-- <button id="stop">Stop</button> -->
-    <!-- <a id="download"></a> -->
-    <!-- <script type="text/javascript" src="{{ url_for('static', filename='recorder.js') }}"></script> -->
-    <!-- </div> -->
-    <img id="video" src="{{ url_for('home_blueprint.video_feed') }}" width="70%" height="70%">
-    <br><br>
-    <form method="post" action="{{ url_for('home_blueprint.tasks') }}">
-        <div class="col-sm-12">
-            <button class="btn btn-success text-white" type="submit" name="stop" value="Stop/Start">Stop/Start
-                Video</button><br>
-            <button class="btn btn-success text-white" type="submit" name="face" value="Change">Change
-                filter</button><br>
-            <button class="btn btn-success text-white" type="submit" name="click" value="Capture">Capture</button>
-            <button class="btn btn-success text-white" type="submit" name="rec" value="Start/Stop Recording">Start/Stop
-                Recording</button>
+        <div class="col-4">
+            <form method="post" action="{{ url_for('home_blueprint.tasks') }}">
+                <div class="col-sm-12">
+                    <button class="btn btn-success text-white" type="submit" name="stop" value="Stop/Start">Stop/Start
+                        Video</button><br><br>
+                    <button class="btn btn-success text-white" type="submit" name="face" value="Change">Change
+                        filter</button><br><br>
+                    <button class="btn btn-success text-white" type="submit" name="click"
+                        value="Capture">Capture</button><br><br>
+                    <button class="btn btn-success text-white" type="submit" name="rec"
+                        value="Start/Stop Recording">Start/Stop
+                        Recording</button>
+                </div>
+            </form>
         </div>
-    </form>
-
+    </div>
 
 
 </div>
