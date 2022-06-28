@@ -5,7 +5,12 @@ Our project coded with basic knowledge of OpenCV, Flask, HTML, CSS and Sqlite3. 
 <br />
 
 ## Preview
-![streaming screen](https://github.com/DuongDuc15/Face-filter/blob/master/preview/streaming.png)
+
+Login Screen
+![Login Screen](https://github.com/DuongDuc15/Face-filter/blob/master/preview/login.png)
+
+Streaming screen
+![Streaming Screen](https://github.com/DuongDuc15/Face-filter/blob/master/preview/streaming.png)
 
 <br>
 
